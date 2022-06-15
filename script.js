@@ -31,6 +31,11 @@ function checkdata()
         principal.focus();
         return false;
     }
+    if(principal.value==""){ 
+        alert("Enter a postive number") 
+        principal.focus();
+        return false;
+    }
 
   
 }
