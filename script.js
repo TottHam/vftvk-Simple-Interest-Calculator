@@ -21,3 +21,16 @@ function updateRate()
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval+"%";
 }
+
+
+function checkdata()
+{
+    var principal = document.getElementById("principal");
+    if(principal.value>=0){ 
+        alert("Enter a postive number") 
+        principal.focus();
+        return false;
+    }
+
+  
+}
