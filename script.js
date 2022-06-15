@@ -6,11 +6,11 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = principal * years * rate /100;
     var year = new Date().getFullYear()+parseInt(years);
-    document.getElementById("result").innerText=
-    "If you deposit " + principal + "," +
-    "\n at an interest rate of " + rate + "%." +
-    "\n You will receive an amount of " + interest + "," +
-    "\n in the year " +year;
+    document.getElementById("result").innerHTML=
+    "If you deposit " + "<mark>" + principal + "</mark></br>" + "," +
+    "\n at an interest rate of " + "<mark>" + rate + "%." + "</mark></br>"+
+    "\n You will receive an amount of "+"<mark>" + interest + "," + "</mark></br>"+
+    "\n in the year "+"<mark>" +year +"</mark>";
 ;
 
 }
@@ -26,7 +26,7 @@ function updateRate()
 function checkdata()
 {
     var principal = document.getElementById("principal");
-    if(principal.value>=0){ 
+    if(principal.value<=0){ 
         alert("Enter a postive number") 
         principal.focus();
         return false;
